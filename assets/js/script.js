@@ -11,6 +11,7 @@ const addEventOnElements = (element, eventType, callback) => {
 
 addEventOnElements(navOpenIcon, 'click', () => {
     navBarEl.classList.add('active')
+    console.log("run");
     overlayEl.classList.add('active')
 })
 
