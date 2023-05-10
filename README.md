@@ -1,5 +1,5 @@
 # meal-master
-[meal master health website](https://my-mealmaster.netlify.app/)ssssssssssssssssssssssssssssssssssss
+[meal master health website](https://my-mealmaster.netlify.app/)
 
 ## Project configuration
 ```bash
