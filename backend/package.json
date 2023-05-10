@@ -8,10 +8,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "authors": [
+    {
+      "name": "rakshyak",
+      "email": "rakshak1998@gmail.com"
+    }
+  ],
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "firebase": "^9.21.0"
+    "express": "^4.18.2",
+    "mongoose": "^7.1.0",
+    "uuid": "^9.0.0"
   }
 }
