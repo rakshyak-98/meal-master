@@ -1,0 +1,24 @@
+{
+  "name": "meal-master",
+  "version": "1.0.0",
+  "description": "meal master health website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "authors": [
+    {
+      "name": "rakshyak",
+      "email": "rakshak1998@gmail.com"
+    }
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.1.0",
+    "uuid": "^9.0.0"
+  }
+}

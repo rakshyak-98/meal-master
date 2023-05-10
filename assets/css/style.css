@@ -100,6 +100,11 @@ body {
     font-family: var(--font-family);
     transition: var(--transition);
 }
+@media screen and (max-width: 980px){
+    .btn{
+        padding-inline: 14px;
+    }
+}
 
 .primary {
     background-color: var(--dark-blue);
