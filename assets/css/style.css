@@ -78,6 +78,7 @@ html {
     font-family: var(--font-family);
     font-size: 10px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -1054,7 +1055,7 @@ nav .nav__link:hover::after {
     }
 
     nav {
-        position: absolute;
+        position: fixed;
         display: block;
         width: 80%;
         left: -350px;
