@@ -11,8 +11,8 @@
 
 
 :root {
-    --primary-color: #fef9e6;
-    --secondary-color: #f1f2f6;
+    --primary-color: #d6e6d5;
+    --secondary-color: #b9c7b9;
     --second-primary-color: #ED4C67;
     --white-color: #fff;
     --black-color: #000;
@@ -232,7 +232,20 @@ nav .nav__link::after {
     position: absolute;
     height: 3px;
 }
-
+nav .nav__link::after.active {
+    content: "";
+    bottom: -5px;
+    left: 0;
+    transition: var(--transition);
+    background-color: var(--second-primary-color);
+    border-radius: 5px;
+    width: 0;
+    position: absolute;
+    height: 3px;
+}
+nav .nav__link.active{
+    color: var(--second-primary-color);
+}
 nav .nav__btns {
     display: flex;
     align-items: center;
