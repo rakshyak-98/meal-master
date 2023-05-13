@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+        #META TAGS
+     -->
+    <meta
+      name="description"
+      content="Discover your ideal diet plan with MealMaster - the ultimate online search tool for healthy eating. Find personalized meal plans, recipes, and nutrition tips to help you achieve your goals."
+    />
+    <meta
+      name="keywords"
+      content="healthy eating, diet plan, meal planner, nutrition, recipes, weight loss, health tips, wellness, food choices, dietary needs"
+    />
+    <meta name="author" content="Your Name or Company Name" />
+    <meta name="robots" content="index,follow" />
+    <meta name="canonical" content="https://www.example.com/mealmaster" />
+
+    <!-- OG (Open Graph) tags for social media sharing -->
+    <meta
+      property="og:title"
+      content="MealMaster - Your Ultimate Guide to Finding the Perfect Diet Plan"
+    />
+    <meta
+      property="og:description"
+      content="Discover your ideal diet plan with MealMaster - the ultimate online search tool for healthy eating. Find personalized meal plans, recipes, and nutrition tips to help you achieve your goals."
+    />
+    <meta
+      property="og:image"
+      content="https://www.example.com/images/mealmaster.png"
+    />
+    <meta property="og:url" content="https://www.example.com/mealmaster" />
+    <meta property="og:type" content="website" />
+
+    <title>
+      MealMaster - Your Ultimate Guide to Finding the Perfect Diet Plan
+    </title>
+
+    <!-- 
+        #FAVICON IMAGE
+     -->
+    <link
+      rel="shortcut icon"
+      href="./assets/image/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- 
+        #CUSTOM CSS LINK
+     -->
+     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/about-us.css" />
+
+    <!-- 
+        #GOOGLE FONTS LINK
+     -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="overlay" data-overlay></div>
+      <div class="container header__container">
+        <a href="#">
+          <h2 class="logo">Master <span>Diet</span></h2>
+        </a>
+
+        <div class="nav__toggle nav__open-icon" data-open-icon>
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+
+        <nav class="navbar" data-navbar>
+          <div class="nav__top">
+            <a href="#">
+              <h2 class="logo">Master <span>Diet</span></h2>
+            </a>
+
+            <div class="nav__toggle nav__close-icon" data-close-icon>
+              <ion-icon name="close-outline"></ion-icon>
+            </div>
+          </div>
+
+          <ul class="nav__list">
+            <li>
+              <a class="nav__link" href="./index.html">Home</a>
+            </li>
+
+            <li>
+              <a class="nav__link" href="#">Diet Plans</a>
+            </li>
+
+            <li>
+              <a class="nav__link" href="#about-us">About Us</a>
+            </li>
+          </ul>
+
+          <div class="nav__btns">
+            <button class="login secondary btn">Log In</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container hero__container">
+        <div class="page--about-us">
+          <h1 class="hero__heading">About Us</h1>
+          <p>
+            Welcome to Master Diet, your ultimate destination for
+            personalized and evidence-based healthy diet recommendations. We are
+            passionate about empowering individuals to take control of their
+            health through proper nutrition and lifestyle choices. With our
+            expertise in web data mining, we aim to revolutionize the way people
+            approach their dietary habits.</p> 
+            <p>At Master Diet, we understand the
+            vital role that nutrition plays in maintaining overall well-being
+            and preventing various diseases. Our team of experts, including
+            nutritionists, dieticians, and data scientists, have come together
+            to develop a cutting-edge system that harnesses the power of data
+            mining techniques to provide personalized diet recommendations.</p>
+            <p>We
+            believe that each person is unique, with distinct medical profiles,
+            cultural backgrounds, and nutrient requirements. Our healthy diet
+            recommendation system takes into account these individual factors to
+            provide tailored meal plans and dietary guidelines. By leveraging
+            the vast amount of information available on the web, we analyze
+            patterns and trends to offer precise recommendations that suit your
+            specific needs.</p> 
+            <p>Our platform is designed to be user-friendly and
+            accessible to everyone. Whether you are seeking to enhance your
+            immune system, manage a specific medical condition, recover from
+            surgery, or simply improve your overall health, our system is here
+            to guide you on your journey. We strive to make the process seamless
+            and enjoyable, offering a range of features such as recipe
+            suggestions, grocery lists, and tracking tools to support your
+            progress.</p> 
+            <p>With Master Diet, you can bid farewell to the pitfalls
+            of fast food and unhealthy eating habits. We firmly believe that by
+            adopting a nutritious diet, you can fortify your body against
+            harmful free radicals, reduce the risk of chronic diseases such as
+            heart attacks and diabetes, and unlock your full potential for a
+            vibrant and energetic life. Join us on this transformative journey
+            towards better health. Start exploring our personalized healthy diet
+            recommendations today and discover the positive impact that proper
+            nutrition can have on your well-being. Together, let's nourish our
+            bodies and embrace a healthier future. Remember, your health is in
+            your hands, and we are here to guide you every step of the way.
+            Welcome to Master Diet - Your partner in healthy living!
+          </p>
+        </div>
+      </div>
+    </section>
+    <script>
+      window.onload = () =>{
+        const url = new URL(location)
+        if(url.pathname.includes('about-us')){
+          document.querySelector('a[href*="about-us"]').classList.add('active')
+        }
+      }
+    </script>
+  </body>
+</html>

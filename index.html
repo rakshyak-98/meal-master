@@ -78,32 +78,22 @@
                 <ul class="nav__list">
 
                     <li>
-                        <a class="nav__link" href="#">Home</a>
+                        <a class="nav__link" href="./index.html">Home</a>
                     </li>
 
                     <li>
-                        <a class="nav__link" href="#">Recipes</a>
+                        <a class="nav__link" href="#">Diet Plans</a>
                     </li>
 
                     <li>
-                        <a class="nav__link" href="#">Meal Plans</a>
-                    </li>
-
-                    <li>
-                        <a class="nav__link" href="#">Blog</a>
-                    </li>
-
-                    <li>
-                        <a class="nav__link" href="#">Contact Us</a>
+                        <a class="nav__link" href="./about-us.html">About Us</a>
                     </li>
 
                 </ul>
 
                 <div class="nav__btns">
                     <button class="login secondary btn">Log In</button>
-                    <button class="login primary btn">Sign In</button>
                 </div>
-
             </nav>
 
         </div>
@@ -117,31 +107,12 @@
 
             <div class="left__hero-section">
 
-                <h1 class="hero__heading">Author's cake and desserts for your holiday</h1>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                    nulla
-                    pariatur.</p>
-
-                <div class="hero__icons icon">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                    <ion-icon name="logo-twitter"></ion-icon>
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </div>
-
+                <h1 class="hero__heading">&quot;Nourish Your Body&comma; Defend Your Health: Discover the Power of a Personalized Healthy Diet.&quot;</p>
             </div>
 
             <div class="middle__hero-section">
                 <img class="hero__img" src="./assets/image/hero.png" alt="Hero Image">
             </div>
-
-            <div class="right__hero-section">
-                <h4>$140</h4>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur.</p>
-                <button class="btn secondary">Read More</button>
-            </div>
-
         </div>
     </section>
 
@@ -528,6 +499,14 @@
      -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        window.onload = () =>{
+          const url = new URL(location)
+          if(url.pathname.includes('index')){
+            document.querySelector('a[href*="index"]').classList.add('active')
+          }
+        }
+      </script>
 </body>
 
 </html>
