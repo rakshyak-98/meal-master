@@ -13,11 +13,16 @@
 :root {
     --primary-color: #d6e6d5;
     --secondary-color: #b9c7b9;
-    --second-primary-color: #ED4C67;
+    --pink-color: #ED4C67;
     --white-color: #fff;
     --black-color: #000;
     --grey-color: #7f8fa6;
     --dark-blue: #1B1464;
+    --dark-green: #606c60;
+    --dark-green-tine-1: #727b72;
+
+    /* fonts */
+    --form-h1: 4rem;
 
     /* transition */
     --transition: all .3s ease;
@@ -49,9 +54,12 @@ iframe,
 button {
     display: block;
 }
-
+img{
+    width: 100%;
+}
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 img {
@@ -76,7 +84,7 @@ button {
 
 html {
     font-family: var(--font-family);
-    font-size: 10px;
+    font-size: 62.5%;
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -85,6 +93,7 @@ body {
     background-color: var(--white-color);
     color: var(--black-color);
     line-height: 1.5;
+    font-size: 1.6rem;
 }
 
 
@@ -116,7 +125,7 @@ body {
 }
 
 .secondary {
-    background-color: var(--second-primary-color);
+    background-color: var(--pink-color);
 }
 
 .secondary:hover {
