@@ -5,8 +5,9 @@
 ```bash
 cd ./backend &\
 npm i &\
-npm run start
 ```
+- for development use `npm run dev` to the backed server.
+
 ## Required Environment variable
 set required username and password to connect to your mongodb database.
 - MONGO_USERNAME: {YOUR CLUSTER USERNAME}
