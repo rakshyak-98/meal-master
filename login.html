@@ -114,7 +114,7 @@
     </header>
     <main>
       <section>
-        <form id="login-form">
+        <form id="login-form" name="authentication">
           <div class="login__form-banner">
             <img src="./assets/image/login-banner.jpg" alt="" />
           </div>
@@ -124,7 +124,7 @@
               Name
               <input
                 type="text"
-                name="userName"
+                name="username"
                 placeholder="John Snow"
                 autocomplete="off"
               />
@@ -132,8 +132,9 @@
             <label for="password">
               Password
               <span>
-                <input type="password" /><span class="eye-icon" data-toggle="0"><i class="fa-regular fa-eye-slash"></i></span>
-            </label>
+                <input type="password" placeholder="Enter password" name="password"/><span class="eye-icon" data-toggle="0"><i class="fa-regular fa-eye-slash"></i></span>
+              </label>
+              <button class="btn secondary">Login</button>
           </div>
         </form>
       </section>
@@ -156,5 +157,7 @@
         })
       }
     </script>
+    <!-- AUTHENTICATION -->
+    <!-- <script src="./assets/js/login-controller.js"></script> -->
   </body>
 </html>
