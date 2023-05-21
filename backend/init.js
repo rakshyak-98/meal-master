@@ -3,7 +3,10 @@ const mongoose = require("mongoose");
 const express = require('express')
 const router = require('./router').default
 const app = express()
+const {checkEnvFile} = require('./utils')
 
+// SEARCH for .env file
+checkEnvFile().then(res => {console.log(res)}).catch(error => {console.log(error)})
 
 // CONSTANTS 
 const PORT = process.env.EXPRESS_PORT || 8000
