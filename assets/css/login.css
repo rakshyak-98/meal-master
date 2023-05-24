@@ -19,6 +19,8 @@
 .login__form-fields input{
     color: var(--dark-green-tint-1);
     padding: 1rem;
+}
+.login__form-fields input[name="username"]{
     text-transform: capitalize;
 }
 .login__form-fields label{
