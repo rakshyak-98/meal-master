@@ -1,10 +1,10 @@
 const { Schema, model } = require("mongoose");
 const uuid = require("uuid");
 
-const schema = new Schema({
-  username: { type: String, required: true },
+const userSchema = new Schema({
+  username: { type: String, required: true, unique: true },
   password: { type: String, rerquired: true },
-  role: { type: String, enum: ["expert", "common"], required: true },
+  role: { type: String, required: false },
 });
 
 const profileSchema = new Schema({
@@ -14,7 +14,7 @@ const profileSchema = new Schema({
   updateOn: Date,
 });
 
-const user = model("user", schema);
+const user = model("user", userSchema);
 const profile = model("profile", profileSchema);
 
 exports.user = user;

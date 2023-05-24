@@ -1,11 +1,16 @@
 const { user } = require("./models");
 const { userSerializer } = require("./serializers");
 const createUser = async (req, res) => {
-  console.log(req.body);
-  const { username, password } = req.body;
-  userSerializer(username, password)
-    .then((user) => res.status(200).send(user))
-    .catch((error) => res.status(400).send(error.message));
+  const { username, password, role } = req.body;
+  const serialized = await userSerializer(username, password, role)
+  try{
+    const userModel = await user.create({...serialized})
+    userModel.save()
+    const query = await user.findOne({username: username})
+    return res.status(201).send({message: "user created successfully", query})
+  }catch(error){
+    return res.status(400).send({error: error.message})
+  }
 };
 const getUsers = async (req, res) => {
   res.status(200).send({ user: [] });

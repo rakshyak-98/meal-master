@@ -1,7 +1,8 @@
 const fs = require('fs')
 const path = require('path')
 exports.checkEnvFile = () => {
-    const _path = path.resolve(__dirname, '.env')
+    // go to root as resolve is the path to current backedn file, so dirname will resolve to parent of backend dir.
+    const _path = path.dirname(path.resolve(__dirname, '.env'))
     return new Promise((resolve, reject) => {
         fs.stat(_path, (error, stats) => {
             if(error){

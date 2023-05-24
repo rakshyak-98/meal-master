@@ -10,8 +10,9 @@ submitButton.addEventListener("click", (e) => {
     body: JSON.stringify({
       username: formdata.get('username'),
       password: formdata.get('password'),
+      role: formdata.get('role')
     }),
   })
-    .then((res) => console.log(res))  
+    .then((res) => console.log(res))
     .catch((error) => console.log(error.message));
 });
