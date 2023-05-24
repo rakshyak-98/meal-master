@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon backend/init.js",
+    "db": "node backend/mongo.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

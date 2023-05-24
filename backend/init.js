@@ -11,16 +11,14 @@ checkEnvFile().then(res => {console.info(res)}).catch(error => {console.info(err
 // CONSTANTS 
 const PORT = process.env.EXPRESS_PORT ?? 8000
 
-
 // mongodb connection.
-connect = () => {
-    const res = mongoose.connect(
-      `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_CLUSTER_STRING}/${process.env.MONGO_DB}?retryWrites=true&w=majority`
-    );
-    res
-      .then((res) => console.info("connected to mongodb+srv!!"))
-      .catch((error) => console.error(error.message));
-  };
+mongoose
+  .connect(
+    `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_CLUSTER_STRING}/${process.env.MONGO_DB}?retryWrites=true&w=majority`
+  )
+  .then(() => console.info("connected to mongodb+srv!!"))
+  .catch((error) => console.error(error.message));
+
 
 // express
 
@@ -41,10 +39,11 @@ app.use((req, res, next) => {
   next();
 });
 
+// decode the data from html form urlencoded, INFO: enable to use req.body
+app.use(express.urlencoded({extended: true}))
   
 app.use(express.json())
 app.use('/user', router)
-connect()
 app.listen(PORT, () => {console.info(`Express Listeing on port ${PORT}`)})
 
 

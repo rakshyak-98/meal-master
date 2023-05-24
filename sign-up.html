@@ -109,7 +109,7 @@
     </header>
     <main>
       <section>
-        <form id="login-form" name="authentication">
+        <form id="login-form" name="authentication" action="http://localhost:3001/user" method="post">
           <div class="login__form-banner">
             <img src="./assets/image/login-banner.jpg" alt="" />
           </div>
@@ -122,18 +122,19 @@
                 name="username"
                 placeholder="John Snow"
                 autocomplete="off"
+                required
               />
             </label>
             <label for="password">
               Password
               <span>
-                <input type="password" placeholder="Enter password" name="password"/><span class="eye-icon" data-toggle="0"><i class="fa-regular fa-eye-slash"></i></span>
+                <input type="password" placeholder="Enter password" name="password" required/><span class="eye-icon" data-toggle="0"><i class="fa-regular fa-eye-slash"></i></span>
             </label>
             <select name="role" id="role">
               <option value="common">User</option>
               <option value="expert">Expert</option>
             </select>
-            <button class="btn secondary">Login</button>
+            <button type="submit" class="btn secondary">Login</button>
           </div>
         </form>
       </section>
@@ -156,7 +157,5 @@
         })
       }
     </script>
-    <!-- AUTHENTICATION -->
-    <script src="./assets/js/signup-controller.js"></script>
   </body>
 </html>
