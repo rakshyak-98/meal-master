@@ -25,3 +25,6 @@
     - replace {...} values. Example {YOUR CLUSTER USERNAME} replace it with cluster0.
 
 ## Project GIF
+
+## Preview
+![home page](./assets/image/meal-master-small.jpg)
