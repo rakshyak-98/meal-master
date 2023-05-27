@@ -1,0 +1,17 @@
+.about-us {
+  text-align: center;
+}
+.about-us__slogan{
+    font-size: 5rem;
+    font-weight: 700;
+}
+.about-us__info{
+    color: var(--pink-light);
+}
+h1 {
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+p {
+  font-size: 1.8rem;
+}
