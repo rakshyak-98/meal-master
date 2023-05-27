@@ -10,6 +10,7 @@
   --primary-color: #d6e6d5;
   --secondary-color: #b9c7b9;
   --pink: #ed4c67;
+  --pink-light: #ea6a7f;
   --orange: #ff725e;
   --white-color: #fff;
   --black-color: #000;
@@ -85,6 +86,11 @@ input::placeholder {
 }
 section h2 {
   font-size: 3.2rem;
+}
+.active{
+  color: var(--pink);
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
 }
 /*-----------------------------------*\
   #HEADER
