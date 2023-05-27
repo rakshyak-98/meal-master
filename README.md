@@ -27,4 +27,4 @@
 ## Project GIF
 
 ## Preview
-![home page](./assets/image/meal-master-small.jpg)
+![home page](./public/image/meal-master-small.jpg)

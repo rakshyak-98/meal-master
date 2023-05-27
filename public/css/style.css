@@ -65,7 +65,7 @@ li {
   max-width: 1900px;
   margin-inline: auto;
 }
-input {
+input, select {
   padding: 1rem;
   background-color: var(--gray-light);
   color: inherit;
