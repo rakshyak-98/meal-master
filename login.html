@@ -52,6 +52,7 @@
      -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/login.css" />
+    <link rel="stylesheet" href="./assets/css/util.css">
 
     <!-- 
         #GOOGLE FONTS LINK
@@ -68,82 +69,67 @@
     ></script>
   </head>
   <body>
-    <header class="header">
-      <div class="overlay" data-overlay></div>
-      <div class="container header__container">
-        <a href="#">
-          <h2 class="logo">Master <span>Diet</span></h2>
-        </a>
+    <header class="container header">
+      <a href="#">
+        <h2 class="logo">Meal <span>Master</span></h2>
+      </a>
+      <nav class="navbar" data-navbar>
+        <ul class="nav__list">
+          <li>
+            <a class="nav__link" href="./index.html">Home</a>
+          </li>
 
-        <div class="nav__toggle nav__open-icon" data-open-icon>
-          <ion-icon name="menu-outline"></ion-icon>
-        </div>
+          <li>
+            <a class="nav__link" href="#">Diet Plans</a>
+          </li>
 
-        <nav class="navbar" data-navbar>
-          <div class="nav__top">
-            <a href="#">
-              <h2 class="logo">Master <span>Diet</span></h2>
-            </a>
-
-            <div class="nav__toggle nav__close-icon" data-close-icon>
-              <ion-icon name="close-outline"></ion-icon>
-            </div>
-          </div>
-
-          <ul class="nav__list">
-            <li>
-              <a class="nav__link" href="./index.html">Home</a>
-            </li>
-
-            <li>
-              <a class="nav__link" href="#">Diet Plans</a>
-            </li>
-
-            <li>
-              <a class="nav__link" href="./about-us.html">About Us</a>
-            </li>
-          </ul>
-
-          <div class="nav__btns">
-            <button type="button" class="login secondary btn">
-              <a href="./sign-up.html">Sign up</a>
-            </button>
-          </div>
-        </nav>
-      </div>
+          <li>
+            <a class="nav__link" href="./about-us.html">About Us</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <section>
-        <form id="login-form" name="authentication">
-          <div class="login__form-banner">
-            <img src="./assets/image/login-banner.jpg" alt="" />
-          </div>
-          <div class="login__form-fields">
-            <h1>Get Started</h1>
-            <label for="name">
-              Name
-              <input
-                type="text"
-                name="username"
-                placeholder="John Snow"
-                autocomplete="off"
-              />
-            </label>
-            <label for="password">
-              Password
-              <span>
-                <input type="password" placeholder="Enter password" name="password"/><span class="eye-icon" data-toggle="0"><i class="fa-regular fa-eye-slash"></i></span>
+        <form id="login" name="authentication">
+          <div class="form__content">
+            <h1 class="text--pink mb--2">Get Started</h1>
+              <ul class="social-links mb--2">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            <p class="mb--1 text--gray">or use your  email for registration:</p>
+            <div class="form__group mb--2">
+              <label for="Name">
+                <input
+                  type="text"
+                  name="username"
+                  placeholder="Name"
+                  autocomplete="off"
+                />
               </label>
-              <button class="btn secondary">Login</button>
+              <label for="email">
+                <input type="email" placeholder="Email" name="email">
+              </label>
+              <label for="password">
+                <div class="input--group">
+                  <input type="password" placeholder="Password" name="password"/>
+                  <span class="eye-icon" data-toggle="0" id="icon"><i class="fa-regular fa-eye-slash"></i>
+                </div>
+                </label>
+            </div>
+              <button class="btn bg--pink text--white" id="login">Login</button>
+          </div>
+          <div class="illustration">
+            <img src="./assets/image/where-next.jpg" alt="">
           </div>
         </form>
-      </section>
-      <h2 class="slogan">"Unlock a Healthier You! Login for Nutritional Excellence."</h2>
     </main>
     <script>
       window.onload = function() {
-        const passwordField = document.querySelector("input[type='password']")
-        passwordField.nextSibling.addEventListener('click', function(e){
+        passwordField = document.querySelector("input[type='password']")
+        passwordField.nextElementSibling.addEventListener('click', function(e){
           if(this.dataset.toggle == '0'){
             this.innerHTML = '<i class="fa-regular fa-eye"></i>'
             passwordField.setAttribute('type', 'text')
