@@ -10,6 +10,7 @@
   --primary-color: #d6e6d5;
   --secondary-color: #b9c7b9;
   --pink: #ed4c67;
+  --pink-light: #ea6a7f;
   --orange: #ff725e;
   --white-color: #fff;
   --black-color: #000;
@@ -28,7 +29,7 @@
   --transition: all 0.3s ease;
 
   --font-family-cursive: "Sofia", cursive;
-  --font-family-body: 'Raleway', sans-serif;;
+  --font-family-body: "Raleway", sans-serif;
 }
 
 /*-----------------------------------*\
@@ -59,12 +60,37 @@ img {
 li {
   list-style: none;
 }
-.main-container, .container {
+.main-container,
+.container {
   max-width: 1900px;
   margin-inline: auto;
 }
-section h2{
+input {
+  padding: 1rem;
+  background-color: var(--gray-light);
+  color: inherit;
+  border: 1px solid var(--gray);
+}
+input::placeholder {
+  color: var(--gray);
+}
+.input--group {
+  position: relative;
+}
+.input--group #icon {
+  position: absolute;
+  right: 0;
+  transform: translate(-8px, calc(50% + 3px));
+  color: var(--gray);
+  z-index: 1;
+}
+section h2 {
   font-size: 3.2rem;
+}
+.active{
+  color: var(--pink);
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
 }
 /*-----------------------------------*\
   #HEADER
@@ -88,6 +114,6 @@ section h2{
   font-size: 1.6rem;
   white-space: nowrap;
 }
-.nav__link{
+.nav__link {
   white-space: nowrap;
 }

@@ -49,7 +49,9 @@
 .text--center{
   text-align: center;
 }
-
+.text--gray{
+  color: var(--gray);
+}
 .max-width--900{
   max-width: 900px;
 }
@@ -62,4 +64,10 @@
 }
 .cursor-pointer--child > *{
   cursor: pointer;
+}
+.cursor--pointer{
+  cursor: pointer;
+}
+.pos-relative{
+position: relative;
 }
