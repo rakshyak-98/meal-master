@@ -1,0 +1,65 @@
+.fm-body {
+  font-family: var(--font-family-body);
+}
+.center {
+  gap: calc((1.6 * 2) * 1rem);
+}
+.ml--2 {
+  margin-left: 2rem;
+}
+.mb--1{
+  margin-bottom: 1rem;
+}
+.mb--2 {
+  margin-bottom: 2rem;
+}
+.mb--4 {
+  margin-bottom: 4rem;
+}
+.mb--6 {
+  margin-bottom: 6rem;
+}
+.mh--auto{
+  margin-inline: auto;
+}
+.ph--2 {
+  padding-inline: 2rem;
+}
+.pv--1 {
+  padding-block: 1rem;
+}
+.p--2 {
+  padding: 2rem;
+}
+.group--flex {
+  --gap: 2rem;
+  display: flex;
+  gap: var(--gap);
+  justify-content: center;
+}
+.bg--pink {
+  background-color: var(--pink);
+}
+.text--white {
+  color: white;
+}
+.text--pink{
+    color: var(--pink);
+}
+.text--center{
+  text-align: center;
+}
+
+.max-width--900{
+  max-width: 900px;
+}
+
+.max-width--600{
+  max-width: 600px;
+}
+.ml--auto{
+  margin-inline: auto;
+}
+.cursor-pointer--child > *{
+  cursor: pointer;
+}

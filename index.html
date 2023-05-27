@@ -1,494 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- 
         #META TAGS
      -->
-    <meta name="description"
-        content="Discover your ideal diet plan with MealMaster - the ultimate online search tool for healthy eating. Find personalized meal plans, recipes, and nutrition tips to help you achieve your goals.">
-    <meta name="keywords"
-        content="healthy eating, diet plan, meal planner, nutrition, recipes, weight loss, health tips, wellness, food choices, dietary needs">
-    <meta name="author" content="Your Name or Company Name">
-    <meta name="robots" content="index,follow">
-    <meta name="canonical" content="https://www.example.com/mealmaster">
+    <meta
+      name="description"
+      content="Discover your ideal diet plan with MealMaster - the ultimate online search tool for healthy eating. Find personalized meal plans, recipes, and nutrition tips to help you achieve your goals."
+    />
+    <meta
+      name="keywords"
+      content="healthy eating, diet plan, meal planner, nutrition, recipes, weight loss, health tips, wellness, food choices, dietary needs"
+    />
+    <meta name="author" content="Your Name or Company Name" />
+    <meta name="robots" content="index,follow" />
+    <meta name="canonical" content="https://www.example.com/mealmaster" />
 
     <!-- OG (Open Graph) tags for social media sharing -->
-    <meta property="og:title" content="MealMaster - Your Ultimate Guide to Finding the Perfect Diet Plan">
-    <meta property="og:description"
-        content="Discover your ideal diet plan with MealMaster - the ultimate online search tool for healthy eating. Find personalized meal plans, recipes, and nutrition tips to help you achieve your goals.">
-    <meta property="og:image" content="https://www.example.com/images/mealmaster.png">
-    <meta property="og:url" content="https://www.example.com/mealmaster">
-    <meta property="og:type" content="website">
+    <meta
+      property="og:title"
+      content="MealMaster - Your Ultimate Guide to Finding the Perfect Diet Plan"
+    />
+    <meta
+      property="og:description"
+      content="Discover your ideal diet plan with MealMaster - the ultimate online search tool for healthy eating. Find personalized meal plans, recipes, and nutrition tips to help you achieve your goals."
+    />
+    <meta
+      property="og:image"
+      content="https://www.example.com/images/mealmaster.png"
+    />
+    <meta property="og:url" content="https://www.example.com/mealmaster" />
+    <meta property="og:type" content="website" />
 
-    <title>MealMaster - Your Ultimate Guide to Finding the Perfect Diet Plan</title>
+    <title>
+      MealMaster - Your Ultimate Guide to Finding the Perfect Diet Plan
+    </title>
 
     <!-- 
         #FAVICON IMAGE
      -->
-    <link rel="shortcut icon" href="./assets/image/favicon.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/image/favicon.png"
+      type="image/x-icon"
+    />
     <!-- 
         #CUSTOM CSS LINK
      -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/util.css" />
+    <link rel="stylesheet" href="./assets/css/main-page.css" />
 
     <!-- 
         #GOOGLE FONTS LINK
      -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Sofia&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawasome -->
+    <script
+      src="https://kit.fontawesome.com/27f3ffb9e9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- 
         #HEADER
      -->
-    <header class="header">
-        <div class="overlay" data-overlay></div>
-        <div class="container header__container">
+    <header class="container header">
+      <a href="#">
+        <h2 class="logo">Meal <span>Master</span></h2>
+      </a>
+      <nav class="navbar" data-navbar>
+        <ul class="nav__list">
+          <li>
+            <a class="nav__link" href="./index.html">Home</a>
+          </li>
 
-            <a href="#">
-                <h2 class="logo">Master <span>Diet</span></h2>
-            </a>
+          <li>
+            <a class="nav__link" href="#">Diet Plans</a>
+          </li>
 
-            <div class="nav__toggle nav__open-icon" data-open-icon>
-                <ion-icon name="menu-outline"></ion-icon>
-            </div>
-
-            <nav class="navbar" data-navbar>
-
-                <div class="nav__top">
-
-                    <a href="#">
-                        <h2 class="logo">Master <span>Diet</span></h2>
-                    </a>
-
-                    <div class="nav__toggle nav__close-icon" data-close-icon>
-                        <ion-icon name="close-outline"></ion-icon>
-                    </div>
-
-                </div>
-
-                <ul class="nav__list">
-
-                    <li>
-                        <a class="nav__link" href="./index.html">Home</a>
-                    </li>
-
-                    <li>
-                        <a class="nav__link" href="#">Diet Plans</a>
-                    </li>
-
-                    <li>
-                        <a class="nav__link" href="./about-us.html">About Us</a>
-                    </li>
-
-                </ul>
-
-                <div class="nav__btns">
-                    <button class="login secondary btn"><a href="./login.html">Log In</a></button>
-                </div>
-            </nav>
-
-        </div>
+          <li>
+            <a class="nav__link" href="./about-us.html">About Us</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- 
         #HERO SECTION
      -->
-    <section class="hero">
+    <main class="main-container">
+      <section class="hero p--2">
         <div class="container hero__container">
-
-            <div class="left__hero-section">
-
-                <h1 class="hero__heading">&quot;Nourish Your Body&comma; Defend Your Health: Discover the Power of a Personalized Healthy Diet.&quot;</p>
-            </div>
-
-            <div class="middle__hero-section">
-                <img class="hero__img" src="./assets/image/hero.png" alt="Hero Image">
-            </div>
+          <div class="left__hero-section">
+            <h1 class="hero__heading mb--2">
+              &quot;Nourish Your Body&comma; Defend Your Health: Discover the
+              Power of a Personalized Healthy Diet.&quot;
+            </h1>
+            <p class="fm-body center">
+              register yourself now<a
+                class="bg--pink text--white fm-body ml--2 ph--2 pv--1"
+                aria-label="login button"
+                href="./login.html"
+                >Register</a
+              >
+            </p>
+          </div>
+          <div>
+            <figure class="eating-img-figure">
+              <img src="./assets/image/eating-healthy-food.png" alt="" />
+              <figcaption>
+                <a href="https://storyset.com/food"
+                  >Food illustrations by Storyset</a
+                >
+              </figcaption>
+            </figure>
+          </div>
         </div>
-    </section>
-
-    <!-- 
-        #ABOUT SECTION
-     -->
-    <section class="about section__padding">
-        <div class="container about__container">
-
-            <div class="about__text">
-                <h2>Few words about myself</h2>
-                <p>Article evident arrived express highest men did boy. Mistress sensible entirely am so. Quick can
-                    manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs
-                    passed but wishes. You day real less till dear read. Considered use dispatched melancholy sympathize
-                    discretion led. Oh feel if up to till like. He an thing rapid these after going drawn or. Timed she
-                    his law the spoil round defer. In surprise concerns informed betrayed he learning is ye. Ignorant
-                    formerly so ye blessing. He as spoke avoid given downs money on we. Of properly carriage shutters ye
-                    as wandered up repeated moreover.</p>
-                <img src="./assets/image/about_sign.png" alt="">
-            </div>
-
-            <div class="about__img">
-                <img src="./assets/image/about.png" alt="about image">
-            </div>
-
+      </section>
+      <section class="common-concerns mb--6">
+        <div class="header">
+          <h2 class="mb--4">Common Health Concerns</h2>
+          <a class="btn btn--outline text--pink" href="">See More Symptoms</a>
         </div>
-    </section>
-
-    <section class="products section__padding">
-        <div class="container product__container">
-
-            <h2 class="product__heading">Catalog</h2>
-
-            <div class="product">
-
-                <div class="product__card">
-                    <img src="./assets/image/product1.jpg" alt="product image">
-                    <h4 class="product__name">Coffee macarons</h4>
-                    <h4 class="product__price">$ 40</h4>
-                </div>
-
-                <div class="product__card">
-                    <img src="./assets/image/product2.jpg" alt="product image">
-                    <h4 class="product__name">Soft chocolate</h4>
-                    <h4 class="product__price">$ 150</h4>
-                </div>
-
-                <div class="product__card">
-                    <img src="./assets/image/product3.jpg" alt="product image">
-                    <h4 class="product__name">Nut tart</h4>
-                    <h4 class="product__price">$ 40</h4>
-                </div>
-
-                <div class="product__card">
-                    <img src="./assets/image/product4.jpg" alt="product image">
-                    <h4 class="product__name">Berry cake</h4>
-                    <h4 class="product__price">$ 130</h4>
-                </div>
-
-                <div class="product__card">
-                    <img src="./assets/image/product5.jpg" alt="product image">
-                    <h4 class="product__name">Caramel cupcakes</h4>
-                    <h4 class="product__price">$ 25</h4>
-                </div>
-
-                <div class="product__card">
-                    <img src="./assets/image/product6.jpg" alt="product image">
-                    <h4 class="product__name">Mango cake</h4>
-                    <h4 class="product__price">$ 30</h4>
-                </div>
-
-                <div class="product__card">
-                    <img src="./assets/image/product7.jpg" alt="product image">
-                    <h4 class="product__name">Raffaello cake</h4>
-                    <h4 class="product__price">$ 180</h4>
-                </div>
-
-                <div class="product__card">
-                    <img src="./assets/image/product8.jpg" alt="product image">
-                    <h4 class="product__name">Lemon tartlet</h4>
-                    <h4 class="product__price">$ 20</h4>
-                </div>
-
+        <div class="group--flex">
+          <div class="concern__card">
+            <p class="query mb--2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Similique at sequi magni quae beatae, esse possimus odit! Odio
+              recusandae ipsa, optio eius nostrum fugit praesentium possimus
+              placeat sapiente, voluptatum unde!
+            </p>
+            <div class="caption">
+              <p class="asked-by">by: <span id="name">rakshyak</span></p>
+              <a class="text--pink" href=""
+                ><i class="fa-regular fa-comment-dots"></i
+              ></a>
             </div>
-
+          </div>
+          <div class="concern__card">
+            <p class="query mb--2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Similique at sequi magni quae beatae, esse possimus odit! Odio
+              recusandae ipsa, optio eius nostrum fugit praesentium possimus
+              placeat sapiente, voluptatum unde!
+            </p>
+            <div class="caption">
+              <p class="asked-by">by: <span id="name">rakshyak</span></p>
+              <a class="text--pink" href=""
+                ><i class="fa-regular fa-comment-dots"></i
+              ></a>
+            </div>
+          </div>
+          <div class="concern__card">
+            <p class="query mb--2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Similique at sequi magni quae beatae, esse possimus odit! Odio
+              recusandae ipsa, optio eius nostrum fugit praesentium possimus
+              placeat sapiente, voluptatum unde!
+            </p>
+            <div class="caption">
+              <p class="asked-by">by: <span id="name">rakshyak</span></p>
+              <a class="text--pink" href=""
+                ><i class="fa-regular fa-comment-dots"></i
+              ></a>
+            </div>
+          </div>
+          <div class="concern__card">
+            <p class="query mb--2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Similique at sequi magni quae beatae, esse possimus odit! Odio
+              recusandae ipsa, optio eius nostrum fugit praesentium possimus
+              placeat sapiente, voluptatum unde!
+            </p>
+            <div class="caption">
+              <p class="asked-by">by: <span id="name">rakshyak</span></p>
+              <a class="text--pink" href=""
+                ><i class="fa-regular fa-comment-dots"></i
+              ></a>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- 
-        #WORK SECTION
-     -->
-    <section class="work section__padding">
-        <div class="work__container container">
-
-            <div class="work__left">
-                <img src="./assets/image/work.png" alt="Work Image">
+      <section class="how-it-works mb--6">
+        <h2 class="text--center mb--4">How it works</h2>
+        <div
+          class="steps group--flex max-width--900 mh--auto cursor-pointer--child"
+        >
+          <figure id="s-1" aria-label="Select a speciality or symptom">
+            <div class="steps__icon">
+              <i class="fa-solid fa-arrow-pointer"></i>
             </div>
-
-            <div class="work__right">
-                <h2>How We Work</h2>
-
-                <div class="work__divs">
-
-                    <div class="work__div">
-                        <h2>01</h2>
-                        <h4>Goods order</h4>
-                        <p>Sample text. Click to select the Text Element.</p>
-                    </div>
-
-                    <div class="work__div">
-                        <h2>02</h2>
-                        <h4>Confirmation</h4>
-                        <p>Sample text. Click to select the Text Element.</p>
-                    </div>
-
-                    <div class="work__div">
-                        <h2>03</h2>
-                        <h4>Delivery</h4>
-                        <p>Sample text. Click to select the Text Element.</p>
-                    </div>
-
-                    <div class="work__div">
-                        <h2>04</h2>
-                        <h4>Payment</h4>
-                        <p>Sample text. Click to select the Text Element.</p>
-                    </div>
-
-                </div>
+          </figure>
+          <figure id="s-2" aria-label="chat with a verified doctor">
+            <div class="steps__icon">
+              <i class="fa-solid fa-user-doctor"></i>
             </div>
-
-
+          </figure>
+          <figure
+            id="s-3"
+            aria-label="Get a digital prescription & a free follow-up"
+          >
+            <div class="steps__icon">
+              <i class="fa-solid fa-file-prescription"></i>
+            </div>
+          </figure>
         </div>
-    </section>
-
-    <!-- 
-        #FACTS AND QUESTIONS
-      -->
-    <section class="questions section__padding">
-        <div class="container question__container">
-
-            <h2>Facts & Questions</h2>
-            <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-
-            <div class="question">
-                <h3>How to pay for an order <ion-icon name="add-outline"></ion-icon></h3>
-                <p>Answer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex.
-                    Suspendisse rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et ultricies
-                    sapien. Quisque fringilla sit amet dolor commodo efficitur. Aliquam et sem odio. In ullamcorper nisi
-                    nunc, et molestie ipsum iaculis sit amet.</p>
+      </section>
+      <section class="faq mb--6">
+        <h2 class="mb--2">FAQs</h2>
+        <ul class="questions">
+          <li id="q-1">
+            <h3>What is online doctor consultation?</h3>
+            <p>
+              Online doctor consultation or online medical consultation is a
+              method to connect patients and doctors virtually. It is a
+              convenient and easy way to get online doctor advice using doctor
+              apps or telemedicine apps or platforms, and the internet.
+            </p>
+          </li>
+          <li id="q-2">
+            <h3>How do I start online consultation with meal master expert?</h3>
+            <p>
+              Starting an online doctor consultation is very simple on meal
+              master. Follow these 4 simple steps:
+            </p>
+            <ul>
+              <li>Choose your health concern</li>
+              <li>Connect with a doctor within 2 minutes</li>
+              <li>Ask your queries to the doctor via audio or video call</li>
+              <li>
+                Get a valid online doctor prescription and a 3-day free online
+                doctor consultation
+              </li>
+            </ul>
+          </li>
+          <li id="q-3">
+            <h3>Are your online doctors qualified?</h3>
+            <p>
+              We follow a strict verification process for every doctor providing
+              online medical services on meal master. Our team manually verifies
+              necessary documents, registrations, and certifications for every
+              doctor.
+            </p>
+          </li>
+          <li id="q-4">
+            <h3>What happens if I don&apos;t get a response from a doctor?</h3>
+            <p>
+              In the unlikely event that an online doctor does not respond, you
+              will be entitled to a 100% refund.
+            </p>
+          </li>
+          <li id="q-5">
+            <h3>
+              Is online doctor consultation safe and secured on meal master?
+            </h3>
+            <p>
+              The privacy of our patients is critical to us, and thus, we are
+              compliant with industry standards like ISO 27001. Rest assured
+              that your online consultation with a doctor is completely safe and
+              secured with 256-bit encryption.
+            </p>
+          </li>
+          <li id="q-6">
+            <h3>Can I do a free online consultation on meal master?</h3>
+            <p>
+              Avail a free online consultation with top doctors in India during
+              the India Health Hour. Click for more details. We have the free
+              questions service available on our health app only. Ask a question
+              and get free online medical advice within 24 to 48 hours.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="health-query mb--6">
+        <h2 class="mb--2">Health Queries</h2>
+        <ul class="queries mb--2">
+          <li id="q-1">
+            <div class="header">
+              <h3>Treatment for many pimples on face</h3>
+              <p class="queries__view--count"><span class="count" id="view">11</span> views</p>
             </div>
-
-            <div class="question">
-                <h3>How to calculate the weight of a cake <ion-icon name="add-outline"></ion-icon></h3>
-                <p>Answer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex.
-                    Suspendisse rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et ultricies
-                    sapien. Quisque fringilla sit amet dolor commodo efficitur. Aliquam et sem odio. In ullamcorper nisi
-                    nunc, et molestie ipsum iaculis sit amet.</p>
+            <p>
+              I have many pimples in my face what can I do for that and my skin
+              is oily skin I want a glow skin plz help me.
+            </p>
+          </li>
+          <li id="q-1">
+            <div class="header">
+              <h3>I m pregnant just one month after miscar</h3>
+              <p class="queries__view--count"><span class="count" id="view">10</span> views</p>
             </div>
-
-            <div class="question">
-                <h3>Where to pick up the cake <ion-icon name="add-outline"></ion-icon></h3>
-                <p>Answer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex.
-                    Suspendisse rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et ultricies
-                    sapien. Quisque fringilla sit amet dolor commodo efficitur. Aliquam et sem odio. In ullamcorper nisi
-                    nunc, et molestie ipsum iaculis sit amet.</p>
+            <p>
+              am pregnant just after one month from miscarriage. Pregnancy kit
+              says positive very light second line. Last month I had miscarriage
+              16 April. I was 6weeks pregnant. It was natural miscarriage no
+              medication was given. Whether it's safe now or it's just the
+              previous month hormones ?
+            </p>
+          </li>
+          <li id="q-1">
+            <div class="header">
+              <h3>Question regarding symptoms</h3>
+              <p class="queries__view--count"><span class="count" id="view">15</span> views</p>
             </div>
-
-            <div class="question">
-                <h3>What is the shelf life <ion-icon name="add-outline"></ion-icon></h3>
-                <p>Answer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex.
-                    Suspendisse rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et ultricies
-                    sapien. Quisque fringilla sit amet dolor commodo efficitur. Aliquam et sem odio. In ullamcorper nisi
-                    nunc, et molestie ipsum iaculis sit amet.</p>
-            </div>
-
-            <div class="question">
-                <h3>You can make a cake with my design <ion-icon name="add-outline"></ion-icon></h3>
-                <p>Answer. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex.
-                    Suspendisse rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et ultricies
-                    sapien. Quisque fringilla sit amet dolor commodo efficitur. Aliquam et sem odio. In ullamcorper nisi
-                    nunc, et molestie ipsum iaculis sit amet.</p>
-            </div>
-
+            <p>
+              Hi dr, i tested myself with five different manufacturers approx.50
+              test kits with five different manufacturers hiv rapid test kits
+              with finger pricked blood method at home after possible sexual
+              exposure 8 years ago which was protected with fsw and result came
+              negative so dr is it accurate? conclusive? M i negative for hiv?
+              Having symptoms like burning sensation in body, weekness,pain in
+              body ? Is it anxiety symptoms? Do I go to psychiatrist for
+              treatment without testing further for hiv?pls help
+            </p>
+          </li>
+        </ul>
+        <div class="timestamp">
+          <p class="mb--1">
+            Last update:
+            <span class="date" aria-label="last update date">26 May 2023</span>
+            | <span class="time" aria-label="last update time">4:56 pm</span>
+          </p>
+          <a href="">View more</a>
         </div>
-    </section>
-
-    <!-- 
-        #BEST CHOICE
-     -->
-    <section class="choices section__padding">
-        <div class="container choice__container">
-
-            <div class="choice">
-                <h2>Best Choice</h2>
-            </div>
-
-            <div class="product">
-
-                <div class="product__card">
-                    <img src="./assets/image/product1.jpg" alt="product image">
-                    <h4 class="product__name">Coffee macarons</h4>
-                    <h4 class="product__price">$ 40</h4>
-                </div>
-
-                <div class="product__card">
-                    <img src="./assets/image/product2.jpg" alt="product image">
-                    <h4 class="product__name">Soft chocolate</h4>
-                    <h4 class="product__price">$ 150</h4>
-                </div>
-
-                <div class="product__card">
-                    <img src="./assets/image/product3.jpg" alt="product image">
-                    <h4 class="product__name">Nut tart</h4>
-                    <h4 class="product__price">$ 40</h4>
-                </div>
-
-                <div class="product__card">
-                    <img src="./assets/image/product4.jpg" alt="product image">
-                    <h4 class="product__name">Berry cake</h4>
-                    <h4 class="product__price">$ 130</h4>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 
-        #WHAT PEOPLE SAY
-     -->
-    <section class="testimonials section__padding">
-        <div class="testimonial__container container">
-
-            <h2>What People Say?</h2>
-
-            <div class="testimonial">
-
-                <div class="testimonial_div">
-                    <img src="./assets/image/product2.jpg" alt="">
-                    <h3>Stella Larson</h3>
-                    <p>Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi
-                        morbi tempus. Ut sem nulla pharetra diam sit amet nisl. </p>
-                    <h4>MONDAY, MAY 2022</h4>
-                </div>
-
-
-                <div class="testimonial_div">
-                    <img src="./assets/image/product5.jpg" alt="">
-                    <h3>Nick Jhonson</h3>
-                    <p>Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi
-                        morbi tempus. Ut sem nulla pharetra diam sit amet nisl. </p>
-                    <h4>MONDAY, JUNE 2022</h4>
-                </div>
-
-
-                <div class="testimonial_div">
-                    <img src="./assets/image/product7.jpg" alt="">
-                    <h3>Olga Ivanova</h3>
-                    <p>Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi
-                        morbi tempus. Ut sem nulla pharetra diam sit amet nisl. </p>
-                    <h4>MONDAY, APRIL 2022</h4>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 
-        #CONTACT
-      -->
-    <section class="contacts section__padding">
-        <div class="contact__container container">
-
-            <div class="contact">
-
-                <div class="left__contact">
-                    <h2>Make an order</h2>
-
-                    <form action="" class="form">
-                        <div class="input__wrapper">
-                            <p>
-                                <input autocomplete="off" type="email" placeholder="Email">
-                            </p>
-                            <p>
-                                <input autocomplete="off" type="text" placeholder="Name">
-                            </p>
-                        </div>
-                        <p>
-                            <input autocomplete="off" type="text" placeholder="Address">
-                        </p>
-                        <p>
-                            <textarea id="" cols="30" rows="10" placeholder="Message"></textarea>
-                        </p>
-                    </form>
-                    <button class="btn primary">Submit</button>
-                </div>
-
-                <div class="right__contact">
-                    <img src="./assets/image/contact.png" alt="contact image">
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 
-        #FOOTER SECTION
-     -->
-    <footer class="footers section__padding">
-        <div class="container footer__container">
-
-            <div class="footer__top">
-
-                <div class="footer__div">
-                    <a href="#">
-                        <img src="./assets/image/asset 71.png" alt="">
-                    </a>
-                    <h3>SOLOGAN COMPANY</h3>
-                </div>
-
-                <div class="footer__div">
-                    <li>WEEBLY THEMES</li>
-                    <li>PRE-SALE FAQS</li>
-                    <li>SUBMIT A TICKET</li>
-                </div>
-
-                <div class="footer__div">
-                    <li>SERVICES</li>
-                    <li>THEME TWEAK</li>
-                </div>
-
-                <div class="footer__div">
-                    <li>SHOWCASE</li>
-                    <li>WIDGETKIT</li>
-                    <li>SUPPORT</li>
-                </div>
-
-                <div class="footer__div">
-                    <li>ABOUT US</li>
-                    <li>CONTACT US</li>
-                    <li>AFFILIATES</li>
-                    <li>RESOURCE</li>
-                </div>
-
-            </div>
-
-            <hr>
-
-            <div class="footer__bottom">
-
-                <div class="footer_icon">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                </div>
-
-                <div class="footer_icon">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                </div>
-
-                <div class="footer_icon">
-                    <ion-icon name="wifi-outline"></ion-icon>
-                </div>
-
-                <div class="footer_icon">
-                    <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-                </div>
-
-            </div>
-
-
-        </div>
-    </footer>
-
-
-
+      </section>
+    </main>
     <!-- 
         #CUSTOM JS LINK
      -->
@@ -497,16 +344,21 @@
     <!-- 
         #ION ICON LINK
      -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script>
-        window.onload = () =>{
-          const url = new URL(location)
-          if(url.pathname.includes('index')){
-            document.querySelector('a[href*="index"]').classList.add('active')
-          }
+      window.onload = () => {
+        const url = new URL(location);
+        if (url.pathname.includes("index")) {
+          document.querySelector('a[href*="index"]').classList.add("active");
         }
-      </script>
-</body>
-
+      };
+    </script>
+  </body>
 </html>
