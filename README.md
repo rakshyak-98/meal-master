@@ -24,11 +24,13 @@
         - MONGO_CLUSTER_STRING: {YOUR COMPLETE CLUSTER NAME}
     - replace {...} values. Example {YOUR CLUSTER USERNAME} replace it with cluster0.
 
+## Features
+- User
+    - Register
+    - Login
+    - My profile
+- Expert
+    - Register
+    - Login
+
 ## Project GIF
-
-## Preview
-![home page](./public/image/meal-master-small.jpg)
-
-
-# ref doc
-[jwttoken](https://www.npmjs.com/package/jsonwebtoken)
