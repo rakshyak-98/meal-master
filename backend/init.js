@@ -1,7 +1,6 @@
 require('dotenv').config()
 const mongoose = require("mongoose");
 const express = require('express')
-const nunjucks = require('nunjucks')
 const registerRouter = require('./routers/registerRouter').default
 const app = express()
 const {checkEnvFile} = require('./utils')
@@ -34,10 +33,6 @@ app.use((_, res, next) => {
 const timeZoneOffset = 330; // Offset in minutes
 const serverTimeZone = new Date().getTimezoneOffset() + timeZoneOffset;
 
-// Nunjucks (https://mozilla.github.io/nunjucks/getting-started.html)
-nunjucks.configure('views', {autoescape: true,express: app})
-
-// console.log(nunjucks.render("index.html", {username: 'rakshyak', age: "21"}))
 // Middleware to set the time zone for each request
 app.use((req, res, next) => {
   req.serverTimeZone = serverTimeZone;
@@ -49,7 +44,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'))
 app.use(express.json())
 
-app.use('/register', registerRouter)
+app.use('/login', registerRouter)
 
 app.listen(PORT, () => {console.info(`Express Listeing on port ${PORT}`)})
 

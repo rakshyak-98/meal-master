@@ -77,7 +77,7 @@ input::placeholder {
 .input--group {
   position: relative;
 }
-.input--group #icon {
+.input--group .icon {
   position: absolute;
   right: 0;
   transform: translate(-8px, calc(50% + 3px));

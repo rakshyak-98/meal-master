@@ -90,7 +90,7 @@
       </nav>
     </header>
     <main>
-        <form id="login" name="auth" action="http://localhost:3001/register" method="post">
+        <form id="login" name="auth">
           <div class="form__content">
             <h1 class="text--pink mb--2">Get Started</h1>
               <ul class="social-links mb--2">
@@ -116,7 +116,7 @@
               <label for="password">
                 <div class="input--group">
                   <input type="password" placeholder="Password" name="password" required/>
-                  <span class="eye-icon" data-toggle="0" id="icon"><i class="fa-regular fa-eye-slash"></i>
+                  <span class="icon" data-toggle="0" id="eye"><i class="fa-regular fa-eye-slash"></i>
                 </div>
               </label>
               <select name="role" id="">
@@ -124,7 +124,7 @@
                 <option value="expert">Expert</option>
               </select>
             </div>
-              <button class="btn bg--pink text--white" id="signup">Sign up</button>
+              <button class="btn bg--pink text--white" id="signup" name="registerBtn">Sign up</button>
           </div>
           <div class="illustration">
             <img src="./public/image/where-next.jpg" alt="">
@@ -148,5 +148,6 @@
         })
       }
     </script>
+    <script src="./public/js/registration.js"></script>
   </body>
 </html>
