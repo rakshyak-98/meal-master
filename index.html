@@ -91,6 +91,9 @@
           <li>
             <a class="nav__link" href="./about-us.html">About Us</a>
           </li>
+          <li>
+            <a class="btn btn--border" href="./login.html">Login</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -357,6 +360,9 @@
         const url = new URL(location);
         if (url.pathname.includes("index")) {
           document.querySelector('a[href*="index"]').classList.add("active");
+        }
+        if(localStorage.getItem('token')){
+          window.location.assign('/feed.html')
         }
       };
     </script>

@@ -10,7 +10,7 @@ registerBtn.addEventListener("click", (e) => {
     role: formData.get("role"),
     password: formData.get("password"),
   };
-  fetch("http://localhost:3001/login", {
+  fetch("http://localhost:3001/reqister", {
     method: "POST",
     body: JSON.stringify(payload),
     headers: {
@@ -18,11 +18,12 @@ registerBtn.addEventListener("click", (e) => {
     },
   })
     .then((res) => {
-      return res.json();
-    })
-    .then(({token}) => {
-      localStorage.setItem("token", token);
-      window.location.replace('/user-profile.html')
+      if (res.status === 200)
+        res.json().then(({ token }) => {
+          localStorage.setItem("token", token);
+          window.location.replace("/profile.html");
+        });
+      else throw Error("Fetch Failed");
     })
     .catch((_) => {
       alert("failed to fetch resource");

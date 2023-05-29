@@ -51,8 +51,8 @@
         #CUSTOM CSS LINK
      -->
     <link rel="stylesheet" href="./public/css/style.css" />
-    <link rel="stylesheet" href="./public/css/login.css" />
-    <link rel="stylesheet" href="./public/css/util.css">
+    <link rel="stylesheet" href="./public/css/util.css" />
+    <link rel="stylesheet" href="./public/css/main-page.css" />
 
     <!-- 
         #GOOGLE FONTS LINK
@@ -60,15 +60,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Sofia&display=swap"
       rel="stylesheet"
     />
+    <!-- fontawasome -->
     <script
       src="https://kit.fontawesome.com/27f3ffb9e9.js"
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
+    <!-- 
+        #HEADER
+     -->
     <header class="container header">
       <a href="#">
         <h2 class="logo">Meal <span>Master</span></h2>
@@ -76,65 +81,51 @@
       <nav class="navbar" data-navbar>
         <ul class="nav__list">
           <li>
-            <a class="nav__link" href="./index.html">Home</a>
+            <a class="nav__link" href="#">Saved Plans</a>
           </li>
 
           <li>
-            <a class="nav__link" href="#">Diet Plans</a>
-          </li>
-
-          <li>
-            <a class="nav__link" href="./about-us.html">About Us</a>
+            <a class="nav__link" href="./profile.html">Profile</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main>
-        <form id="login" name="auth">
-          <div class="form__content">
-            <h1 class="text--pink mb--2">Member Login</h1>
-              <!-- <ul class="social-links mb--2">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul> -->
-            <p class="mb--1 text--gray">or use your  email for registration:</p>
-            <div class="form__group mb--2">
-              <label for="email">
-                <input type="email" placeholder="Email" name="email" required>
-              </label>
-              <label for="password">
-                <div class="input--group">
-                  <input type="password" placeholder="Password" name="password" required/>
-                  <span class="icon" data-toggle="0" id="icon"><i class="fa-regular fa-eye-slash"></i>
-                </div>
-                </label>
+    <main class="container--center container--desktop">
+      <section class="main-feed">
+        <div class="input--group fs--medium mb--2" id="searchBar">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search by problem or symptom..."
+          />
+          <span class="icon" id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+        </div>
+        <hr class="mb--6" />
+        <div class="list" id="feeds">
+          <div class="feed">
+            <span class="icon" id="brain">
+              <i class="fa-solid fa-brain"></i>
+            </span>
+            <div class="symptom">
+              <h2 class="mb--1">Hypertension medication</h2>
+              <p class="mb--2">
+                I am having stress type headache since one month for which my
+                pshychiatrist prescribe me propanol 40 mg he wants me to change
+                to propanol from nebivelol 5mg which control pressure,tension
+                headache and anxiety I am already taking nebicard 5 once in
+                morning for hypertension pressure well control 130/80 Pls advice
+                can a pshychiatrist change your pressure medicine
+              </p>
+              <div class="footer">
+                <span class="view"><em id="count">16</em> Views</span>
+                <span class="time">6:00pm</span>
+              </div>
             </div>
-              <button class="btn bg--pink text--white" id="login" name="loginBtn">login</button>
           </div>
-          <div class="illustration">
-            <img src="./public/image/where-next.jpg" alt="">
-          </div>
-        </form>
+        </div>
+      </section>
     </main>
-    <script>
-      window.onload = function() {
-        passwordField = document.querySelector("input[type='password']")
-        passwordField.nextElementSibling.addEventListener('click', function(e){
-          if(this.dataset.toggle == '0'){
-            this.innerHTML = '<i class="fa-regular fa-eye"></i>'
-            passwordField.setAttribute('type', 'text')
-            this.dataset.toggle = '1'
-          }
-          else{
-            this.innerHTML = '<i class="fa-regular fa-eye-slash "></i>'
-            passwordField.setAttribute('type', 'password')
-            this.dataset.toggle = '0'
-          }
-        })
-      }
-    </script>
-    <script src="public/js/login.js"></script>
   </body>
 </html>

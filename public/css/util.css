@@ -7,7 +7,7 @@
 .ml--2 {
   margin-left: 2rem;
 }
-.mb--1{
+.mb--1 {
   margin-bottom: 1rem;
 }
 .mb--2 {
@@ -19,7 +19,7 @@
 .mb--6 {
   margin-bottom: 6rem;
 }
-.mh--auto{
+.mh--auto {
   margin-inline: auto;
 }
 .ph--2 {
@@ -43,31 +43,46 @@
 .text--white {
   color: white;
 }
-.text--pink{
-    color: var(--pink);
+.text--pink {
+  color: var(--pink);
 }
-.text--center{
+.text--center {
   text-align: center;
 }
-.text--gray{
+.text--gray {
   color: var(--gray);
 }
-.max-width--900{
+.max-width--900 {
   max-width: 900px;
 }
 
-.max-width--600{
+.max-width--600 {
   max-width: 600px;
 }
-.ml--auto{
+.ml--auto {
   margin-inline: auto;
 }
-.cursor-pointer--child > *{
+.cursor-pointer--child > * {
   cursor: pointer;
 }
-.cursor--pointer{
+.cursor--pointer {
   cursor: pointer;
 }
-.pos-relative{
-position: relative;
+.pos-relative {
+  position: relative;
+}
+.fs--medium {
+  font-size: 2.2rem;
+}
+.container--center {
+  margin-inline: auto;
+}
+.container--desktop {
+  max-width: 900px;
+}
+.w--full {
+  width: 100%;
+}
+.btn--border{
+  border: 1px solid var(--pink);
 }

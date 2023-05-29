@@ -21,6 +21,7 @@
   --gray: #b9b9b9;
   --gray-dark: #6a6868;
   --gray-light: #f0eff4;
+  --blue: #16b6eb;
 
   /* fonts */
   --form-h1: 4rem;
@@ -53,6 +54,7 @@ html {
 }
 body {
   font-size: 1.6rem;
+  color: #333333;
 }
 img {
   width: 100%;
@@ -65,29 +67,38 @@ li {
   max-width: 1900px;
   margin-inline: auto;
 }
-input, select {
+input,
+select {
+  font-size: inherit;
   padding: 1rem;
   background-color: var(--gray-light);
   color: inherit;
   border: 1px solid var(--gray);
+}
+hr {
+  border-color: var(--gray-light);
 }
 input::placeholder {
   color: var(--gray);
 }
 .input--group {
   position: relative;
+  display: flex;
+}
+.input--group input{
+  flex-grow: 1;
 }
 .input--group .icon {
   position: absolute;
   right: 0;
-  transform: translate(-8px, calc(50% + 3px));
+  transform: translate(-8px, calc(50%));
   color: var(--gray);
   z-index: 1;
 }
 section h2 {
   font-size: 3.2rem;
 }
-.active{
+.active {
   color: var(--pink);
   text-decoration-line: underline;
   text-underline-offset: 4px;
@@ -116,4 +127,24 @@ section h2 {
 }
 .nav__link {
   white-space: nowrap;
+}
+/* feed */
+.symptom {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--gray-light);
+}
+.feed {
+  display: flex;
+  gap: 2rem;
+}
+.feed .symptom :not(:first-child) {
+  color: var(--gray-dark);
+}
+.feed .footer {
+  display: flex;
+  justify-content: space-between;
+}
+.icon#brain {
+  color: var(--blue);
+  font-size: 2.8rem;
 }
