@@ -18,14 +18,15 @@ registerBtn.addEventListener("click", (e) => {
     },
   })
     .then((res) => {
-      if (res.status === 200)
+      if (res.status === 200 || res.status === 201)
         res.json().then(({ token }) => {
           localStorage.setItem("token", token);
           window.location.replace("/profile.html");
         });
       else throw Error("Fetch Failed");
     })
-    .catch((_) => {
+    .catch((error) => {
       alert("failed to fetch resource");
+      console.log(error)
     });
 });

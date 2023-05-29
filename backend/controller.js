@@ -5,7 +5,6 @@ const jwt = require("jsonwebtoken");
 const createUser = async (req, res) => {
   const { email, username, password, role } = req.body;
   try {
-    // TODO: refactor operation in OOPs.
     const serialized = await userSerializer({
       email,
       username,
