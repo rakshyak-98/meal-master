@@ -53,6 +53,7 @@
     <link rel="stylesheet" href="./public/css/style.css" />
     <link rel="stylesheet" href="./public/css/util.css" />
     <link rel="stylesheet" href="./public/css/main-page.css" />
+    <link rel="stylesheet" href="./public/css/profile.css" />
 
     <!-- 
         #GOOGLE FONTS LINK
@@ -81,11 +82,7 @@
       <nav class="navbar" data-navbar>
         <ul class="nav__list">
           <li>
-            <a class="nav__link" href="#">Saved Plans</a>
-          </li>
-
-          <li>
-            <a class="nav__link" href="./profile.html">Profile</a>
+            <a class="nav__link" href="feed.html">Go To Feeds</a>
           </li>
           <li>
             <a class="nav__link" id="logout" href="./index.html">Log out</a>
@@ -101,7 +98,76 @@
       </nav>
     </header>
     <main class="container--center container--desktop">
-      <h1>Under Maintenance!!</h1>
+      <section>
+        <div class="profile__header">
+          <div class="profile" data-profile="default">
+            <span class="icon" id="user"
+              ><i class="fa-regular fa-user"></i
+            ></span>
+          </div>
+          <div class="profile__info">
+            <h2 data-name="">Rakshyak</h2>
+            <p>Expert</p>
+          </div>
+        </div>
+        <div class="profile__bar">
+          <ul>
+            <li><a id="myQuery" href="#my-query">My Queries</a></li>
+            <li>
+              <a id="newQuery" href="#create-new-query">Create new Query</a>
+            </li>
+            <li><a id="savedPlans" href="#saved-plans">Saved diet plans</a></li>
+          </ul>
+          <button class="btn bg--pink text--white">Choose symptom</button>
+        </div>
+      </section>
+      <section data-view="new-query" id="profile-view">
+        <div class="symptoms">
+          <select name="symptom-category" id="symptom-selection">
+            <option value="common-cold">common cold</option>
+            <option value="none">Not in the list</option>
+          </select> 
+          <div data-query="none" class="enter-info">
+            <input type="text" placeholder="Enter disesess name" />
+            <div>
+                <p>Recomended by doctor</p>
+                <label for="recomendation"
+                ><input type="radio" name="response" id="1" />yes</label
+                >
+                <label for="recomendation"
+                ><input type="radio" name="response" id="0" />no</label
+                >
+            </div>
+            <input type="text" placeholder="Enter doctor name" />
+        </div>
+          <div class="symptom-list" data-symptom="common-cold">
+            <label for="headache"
+              ><input type="checkbox" id="0" />Sneezing</label
+            >
+            <label for="headache"
+              ><input type="checkbox" id="1" />Stuffy nose</label
+            >
+            <label for="headache"
+              ><input type="checkbox" id="2" />Runny nose</label
+            >
+            <label for="headache"
+              ><input type="checkbox" id="3" />Sore throat</label
+            >
+            <label for="headache"
+              ><input type="checkbox" id="4" />Coughing</label
+            >
+            <label for="headache"
+              ><input type="checkbox" id="5" />Watery eyes</label
+            >
+            <label for="headache"><input type="checkbox" id="6" />Fever</label>
+          </div>
+        </div>
+        <!-- pagination -->
+        <div class="page-navigation" data-offsetStart="0" data-offsetStop="10">
+          pagenavigation
+        </div>
+      </section>
     </main>
+    <script src="public/js/profile.js"></script>
   </body>
 </html>

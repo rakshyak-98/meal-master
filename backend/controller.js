@@ -14,7 +14,6 @@ const createUser = async (req, res) => {
     });
     const user = await client.create({ ...serialized });
     const token = jwt.sign({ ...user }, process.env.JWT_SECRET);
-    await user.save();
     return res.status(201).send({ token });
   } catch (error) {
     return res.status(400).send({ error: error.message });
