@@ -1,4 +1,4 @@
-const { userSerializer } = require("./serializers");
+const { userSerializer, postSerializer } = require("./serializers");
 const { user: client, post } = require("./models");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -41,7 +41,8 @@ const loginUser = async (req, res) => {
 
 const createPost = (req, res) => {
   try {
-    post.create(req.body);
+    const serialized = postSerializer(req.body)
+    post.create();
   } catch (error) {
     console.log(error.message);
   }
