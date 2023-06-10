@@ -13,3 +13,11 @@ exports.checkEnvFile = () => {
         })
     })
 }
+
+exports.checkKey = (keyList, obj) => {
+    keyList.forEach((k1) => {
+        if(!(k1 in obj)){
+            throw Error(`Object do not have key ${k1}`)
+        }
+    })
+}

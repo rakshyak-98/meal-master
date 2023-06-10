@@ -1,23 +1,25 @@
-const bcrypt = require('bcrypt');
-const userSerializer = async function(obj){
+const bcrypt = require("bcrypt");
+const { checkKey } = require("./utils");
+const userSerializer = async function (obj) {
+  checkKey(["username", "password", "role", "email"], obj);
 
-    ["username", "password", "role", "email"].forEach((k1) => {
-        if(!(k1 in obj)){
-            throw Error(`Object do not have key ${k1}`)
-        }
-    })
+  let { username, password, role, email } = obj;
 
-    let {username, password, role, email} = obj
+  const saltRounds = 10;
 
-    const saltRounds = 10;
-    
-    // remove the space from front and back.
-    username = username.trim()
-    password = password.trim()
-    
-    password = await bcrypt.hash(password, saltRounds)
+  // remove the space from front and back.
+  username = username.trim();
+  password = password.trim();
 
-    const user = new Object({username, password, email, role})
-    return user
-}
-exports.userSerializer = userSerializer
+  password = await bcrypt.hash(password, saltRounds);
+
+  const user = new Object({ username, password, email, role });
+  return user;
+};
+
+const postSerializer = async function (obj) {
+  checkKey(["user", "title", "description"], obj);
+};
+
+exports.userSerializer = userSerializer;
+exports.postSerializer = postSerializer;
