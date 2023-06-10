@@ -48,6 +48,10 @@
 .profile__bar ul > li {
   padding: 1rem;
 }
+#profile-view textarea#description{
+    resize: none;
+    width: 100%;
+}
 
 #profile-view {
   --border-width: 1px;
@@ -66,4 +70,15 @@
 .symptom-list {
   display: flex;
   gap: 2rem;
+}
+.lazy-more{
+  color: var(--gray-dark);
+  cursor: default;
+  display: flex;
+  gap: .4rem;
+  justify-content: center;
+  align-items: center;
+}
+.lazy-more:hover{
+  color: var(--gray);
 }

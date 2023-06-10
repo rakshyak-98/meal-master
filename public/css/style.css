@@ -67,6 +67,7 @@ li {
   max-width: 1900px;
   margin-inline: auto;
 }
+textarea,
 input,
 select {
   font-size: inherit;
