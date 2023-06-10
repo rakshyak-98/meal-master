@@ -67,9 +67,18 @@
   bottom: 10px;
   right: 10px;
 }
+.enter-info{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: start;
+}
 .symptom-list {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
+}
+.symptom-list label input{
+  margin-right: .4rem;
 }
 .lazy-more{
   color: var(--gray-dark);

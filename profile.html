@@ -122,68 +122,61 @@
         </div>
       </section>
       <section data-view="new-query" id="profile-view">
-        <div class="mb--4">
-          <div class="symptoms mb--2">
-            <select
-              name="symptom-category"
-              class="mb--1"
-              id="symptom-selection"
-            >
-              <option value="common-cold">common cold</option>
-              <option value="none">Not in the list</option>
-            </select>
-            <div data-query="none" class="enter-info">
-              <input type="text" placeholder="Enter disesess name" />
-              <div>
-                <p>Recomended by doctor</p>
-                <label for="recomendation"
-                  ><input type="radio" name="response" id="1" />yes</label
-                >
-                <label for="recomendation"
-                  ><input type="radio" name="response" id="0" />no</label
-                >
-              </div>
-              <input type="text" placeholder="Enter doctor name" />
-            </div>
-            <div class="symptom-list" data-symptom="common-cold">
-              <label for="headache"
-                ><input type="checkbox" id="0" />Sneezing</label
-              >
-              <label for="headache"
-                ><input type="checkbox" id="1" />Stuffy nose</label
-              >
-              <label for="headache"
-                ><input type="checkbox" id="2" />Runny nose</label
-              >
-              <label for="headache"
-                ><input type="checkbox" id="3" />Sore throat</label
-              >
-              <label for="headache"
-                ><input type="checkbox" id="4" />Coughing</label
-              >
-              <label for="headache"
-                ><input type="checkbox" id="5" />Watery eyes</label
-              >
-              <label for="headache"
-                ><input type="checkbox" id="6" />Fever</label
-              >
-            </div>
+        <div class="symptoms mb--2">
+          <div class="mb--2">
+            <input type="text" placeholder="Enter title" />
           </div>
-          <div class="lazy-more" id="more"><i class="fa-solid fa-plus"></i><span>more</span></div>
         </div>
         <textarea
+          class="mb--2"
           name="description"
           id="description"
           cols="30"
           rows="10"
           placeholder="Can type description for your query..."
         ></textarea>
-        <!-- pagination -->
-        <div class="page-navigation" data-offsetStart="0" data-offsetStop="10">
-          pagenavigation
+        <div>
+          <select name="symptom-category" class="mb--2 symptom-selection">
+            <option value="common-cold">common cold</option>
+            <option value="none">Not in the list</option>
+          </select>
+          <div data-query="none" class="enter-info">
+            <input type="text" placeholder="Enter disesess name" />
+            <div>
+              <p>Recomended by doctor</p>
+              <label for="recomendation"
+                ><input type="radio" name="response" id="1" />yes</label
+              >
+              <label for="recomendation"
+                ><input type="radio" name="response" id="0" />no</label
+              >
+            </div>
+            <input type="text" placeholder="Enter doctor name" />
+          </div>
+          <div class="symptom-list" data-symptom="common-cold">
+            <label for="headache"
+              ><input type="checkbox" id="0" />Sneezing</label
+            >
+            <label for="headache"
+              ><input type="checkbox" id="1" />Stuffy nose</label
+            >
+            <label for="headache"
+              ><input type="checkbox" id="2" />Runny nose</label
+            >
+            <label for="headache"
+              ><input type="checkbox" id="3" />Sore throat</label
+            >
+            <label for="headache"
+              ><input type="checkbox" id="4" />Coughing</label
+            >
+            <label for="headache"
+              ><input type="checkbox" id="5" />Watery eyes</label
+            >
+            <label for="headache"><input type="checkbox" id="6" />Fever</label>
+          </div>
         </div>
       </section>
     </main>
-    <script src="public/js/profile.js"></script>
+    <script src="public/scripts/profile.js"></script>
   </body>
 </html>
