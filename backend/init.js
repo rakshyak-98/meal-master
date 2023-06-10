@@ -1,7 +1,7 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 const express = require("express");
-const { createUser, getUsers, loginUser } = require("./controller");
+const { createUser, createPost, loginUser } = require("./controller");
 const app = express();
 const { checkEnvFile } = require("./utils");
 
@@ -54,6 +54,7 @@ app.use(express.json());
 
 app.post("/login", loginUser);
 app.post("/reqister", createUser);
+app.post("/post", createPost)
 
 app.listen(PORT, () => {
   console.info(`Express Listeing on port ${PORT}`);

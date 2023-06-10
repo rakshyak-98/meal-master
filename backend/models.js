@@ -15,8 +15,20 @@ const profileSchema = new Schema({
   updateOn: Date,
 });
 
+const postSchema = new Schema({
+  user: {type: String, required: true},
+  title: {
+    type: String,
+    required: true
+  },
+  description: {type: String}
+})
+
 const user = model("user", userSchema);
 const profile = model("profile", profileSchema);
 
+const post = model("post", postSchema)
+
 exports.user = user;
 exports.profile = profile;
+exports.post = post
