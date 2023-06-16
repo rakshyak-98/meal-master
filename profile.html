@@ -98,47 +98,31 @@
       </nav>
     </header>
     <main class="container--center container--desktop">
-      <section>
-        <div class="profile__header">
-          <div class="profile" data-profile="default">
-            <span class="icon" id="user"
-              ><i class="fa-regular fa-user"></i
-            ></span>
-          </div>
-          <div class="profile__info">
-          </div>
+      <div class="profile__header">
+        <div class="profile" data-profile="default">
+          <span class="icon" id="user"><i class="fa-regular fa-user"></i></span>
         </div>
-        <div class="profile__bar">
-          <ul>
-            <li><a id="myQuery" href="#my-query">My Queries</a></li>
-            <li>
-              <a id="newQuery" href="#create-new-query">Create new Query</a>
-            </li>
-            <li><a id="savedPlans" href="#saved-plans">Saved diet plans</a></li>
-          </ul>
-          <button class="btn bg--pink text--white" id="post-symptom">
-            Post
-          </button>
-        </div>
-      </section>
-      <section data-view="new-query" id="profile-view">
-        <form name="newQuery">
-          <input
-            class="mb--2"
-            type="text"
-            placeholder="Enter title"
-            name="title"
-          />
-          <textarea
-            class="mb--2"
-            name="description"
-            id="description"
-            cols="30"
-            rows="10"
-            placeholder="Can type description for your query..."
-          ></textarea>
-        </form>
-      </section>
+        <div class="profile__info"></div>
+      </div>
+      <div class="profile__bar">
+        <ul>
+          <li>
+            <a id="myQuery" data-active="false" href="#my-query">My Queries</a>
+          </li>
+          <li>
+            <a id="newQuery" data-active="true" href="#create-new-query"
+              >Create new Query</a
+            >
+          </li>
+          <li>
+            <a id="savedPlans" data-active="false" href="#saved-plans"
+              >Saved diet plans</a
+            >
+          </li>
+        </ul>
+        <button class="btn bg--pink text--white" id="post-symptom">Post</button>
+      </div>
+      <section data-view="new-query" id="profile-view"></section>
     </main>
     <script src="public/scripts/profile.js"></script>
   </body>
