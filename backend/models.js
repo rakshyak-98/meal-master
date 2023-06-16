@@ -24,11 +24,8 @@ const postSchema = new Schema({
   description: {type: String}
 })
 
-const user = model("user", userSchema);
-const profile = model("profile", profileSchema);
-
-const post = model("post", postSchema)
+const user = model("User", userSchema);
+const post = model("Post", postSchema)
 
 exports.user = user;
-exports.profile = profile;
 exports.post = post

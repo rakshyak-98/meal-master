@@ -1,9 +1,11 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 const express = require("express");
-const { createUser, createPost, loginUser } = require("./controller");
+const { createUser, createPost, loginUser, getUser } = require("./controller");
 const app = express();
 const { checkEnvFile } = require("./utils");
+const { verify } = require("jsonwebtoken");
+const { user } = require("./models");
 
 // SEARCH for .env file
 checkEnvFile()
@@ -28,11 +30,11 @@ mongoose
 // express
 
 // ** ENABLE CORS FOR ALL ROUTES
-app.use((_, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); // Replace * with the allowed origin(s) if needed
-  res.header(
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+  res.setHeader(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
+    "Origin, Content-Type, Authorization"
   );
   next();
 });
@@ -54,7 +56,8 @@ app.use(express.json());
 
 app.post("/login", loginUser);
 app.post("/reqister", createUser);
-app.post("/post", createPost)
+app.post("/post", createPost);
+app.get("/user", getUser);
 
 app.listen(PORT, () => {
   console.info(`Express Listeing on port ${PORT}`);
