@@ -3,14 +3,8 @@ const { user: client, post } = require("./models");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const createUser = async (req, res) => {
-  const { email, username, password, role } = req.body;
   try {
-    const serialized = await userSerializer({
-      email,
-      username,
-      password,
-      role,
-    });
+    const serialized = await userSerializer(req.body);
     await client.create({ ...serialized });
     const user = client.findOne({ email });
     const token = jwt.sign({ ...user }, process.env.JWT_SECRET);

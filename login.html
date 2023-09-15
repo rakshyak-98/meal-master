@@ -93,12 +93,6 @@
         <form id="login" name="auth">
           <div class="form__content">
             <h1 class="text--pink mb--2">Member Login</h1>
-              <!-- <ul class="social-links mb--2">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul> -->
             <p class="mb--1 text--gray">or use your  email for registration:</p>
             <div class="form__group mb--2">
               <label for="email">
@@ -112,6 +106,7 @@
                 </label>
             </div>
               <button class="btn bg--pink text--white" id="login" name="loginBtn">login</button>
+              <a href="/sign-up.html">Don't have an accont create one.</a>
           </div>
           <div class="illustration">
             <img src="./public/image/where-next.jpg" alt="">
@@ -128,7 +123,7 @@
             this.dataset.toggle = '1'
           }
           else{
-            this.innerHTML = '<i class="fa-regular fa-eye-slash "></i>'
+            this.innerHTML = '<i class="fa-regular fa-eye-slash"></i>'
             passwordField.setAttribute('type', 'password')
             this.dataset.toggle = '0'
           }

@@ -1,3 +1,6 @@
+const CONST = {
+  connectionString: "mongodb://localhost:27017/meal-master",
+};
 require("dotenv").config();
 const mongoose = require("mongoose");
 const express = require("express");
@@ -21,9 +24,7 @@ const PORT = process.env.EXPRESS_PORT ?? 8000;
 
 // mongodb connection.
 mongoose
-  .connect(
-    `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_CLUSTER_STRING}/${process.env.MONGO_DB}?retryWrites=true&w=majority`
-  )
+  .connect(CONST.connectionString)
   .then(() => console.info("connected to mongodb+srv!!"))
   .catch((error) => console.error(error.message));
 
