@@ -1,4 +1,4 @@
-DB_PREFIX="meal-master-v1"
+DB_PREFIX="meal-master-v2"
 let request = indexedDB.open(DB_PREFIX, 1)
 
 request.onupgradeneeded = function(event){
