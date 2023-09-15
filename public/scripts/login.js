@@ -24,9 +24,6 @@ function sendRequest(form) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   }
-  fetch(url.href, fetchOptions)
-    .then(handleResponse)
-    .catch(handleResponseError);
 }
 function handleResponseError(error){
       alert("Login failed");
