@@ -1,129 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 
         #META TAGS
      -->
-    <meta
-      name="description"
-      content="Discover your ideal diet plan with MealMaster - the ultimate online search tool for healthy eating. Find personalized meal plans, recipes, and nutrition tips to help you achieve your goals."
-    />
-    <meta
-      name="keywords"
-      content="healthy eating, diet plan, meal planner, nutrition, recipes, weight loss, health tips, wellness, food choices, dietary needs"
-    />
-    <meta name="author" content="Your Name or Company Name" />
-    <meta name="robots" content="index,follow" />
-    <meta name="canonical" content="https://www.example.com/mealmaster" />
+  <meta name="description"
+    content="Discover your ideal diet plan with MealMaster - the ultimate online search tool for healthy eating. Find personalized meal plans, recipes, and nutrition tips to help you achieve your goals." />
+  <meta name="keywords"
+    content="healthy eating, diet plan, meal planner, nutrition, recipes, weight loss, health tips, wellness, food choices, dietary needs" />
+  <meta name="author" content="Your Name or Company Name" />
+  <meta name="robots" content="index,follow" />
+  <meta name="canonical" content="https://www.example.com/mealmaster" />
 
-    <!-- OG (Open Graph) tags for social media sharing -->
-    <meta
-      property="og:title"
-      content="MealMaster - Your Ultimate Guide to Finding the Perfect Diet Plan"
-    />
-    <meta
-      property="og:description"
-      content="Discover your ideal diet plan with MealMaster - the ultimate online search tool for healthy eating. Find personalized meal plans, recipes, and nutrition tips to help you achieve your goals."
-    />
-    <meta
-      property="og:image"
-      content="https://www.example.com/images/mealmaster.png"
-    />
-    <meta property="og:url" content="https://www.example.com/mealmaster" />
-    <meta property="og:type" content="website" />
+  <!-- OG (Open Graph) tags for social media sharing -->
+  <meta property="og:title" content="MealMaster - Your Ultimate Guide to Finding the Perfect Diet Plan" />
+  <meta property="og:description"
+    content="Discover your ideal diet plan with MealMaster - the ultimate online search tool for healthy eating. Find personalized meal plans, recipes, and nutrition tips to help you achieve your goals." />
+  <meta property="og:image" content="https://www.example.com/images/mealmaster.png" />
+  <meta property="og:url" content="https://www.example.com/mealmaster" />
+  <meta property="og:type" content="website" />
 
-    <title>
-      MealMaster - Your Ultimate Guide to Finding the Perfect Diet Plan
-    </title>
+  <title>
+    MealMaster - Your Ultimate Guide to Finding the Perfect Diet Plan
+  </title>
 
-    <!-- 
+  <!-- 
         #FAVICON IMAGE
      -->
-    <link
-      rel="shortcut icon"
-      href="./public/image/favicon.png"
-      type="image/x-icon"
-    />
-    <!-- 
+  <link rel="shortcut icon" href="./public/image/favicon.png" type="image/x-icon" />
+  <!-- 
         #CUSTOM CSS LINK
      -->
-    <link rel="stylesheet" href="./public/css/style.css" />
-    <link rel="stylesheet" href="./public/css/util.css" />
-    <link rel="stylesheet" href="./public/css/main-page.css" />
-    <link rel="stylesheet" href="./public/css/profile.css" />
+  <link rel="stylesheet" href="./public/css/style.css" />
+  <link rel="stylesheet" href="./public/css/util.css" />
+  <link rel="stylesheet" href="./public/css/main-page.css" />
+  <link rel="stylesheet" href="./public/css/profile.css" />
 
-    <!-- 
+  <!-- 
         #GOOGLE FONTS LINK
      -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Sofia&display=swap"
-      rel="stylesheet"
-    />
-    <!-- fontawasome -->
-    <script
-      src="https://kit.fontawesome.com/27f3ffb9e9.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Sofia&display=swap"
+    rel="stylesheet" />
+  <!-- fontawasome -->
+  <script src="https://kit.fontawesome.com/27f3ffb9e9.js" crossorigin="anonymous"></script>
+</head>
 
-  <body>
-    <!-- 
+<body>
+  <!-- 
         #HEADER
      -->
-    <header class="container header">
-      <a href="#">
-        <h2 class="logo">Meal <span>Master</span></h2>
-      </a>
-      <nav class="navbar" data-navbar>
-        <ul class="nav__list">
-          <li>
-            <a class="nav__link" href="feed.html">Go To Feeds</a>
-          </li>
-          <li>
-            <a class="nav__link" id="logout" href="./index.html">Log out</a>
-          </li>
-        </ul>
-        <script>
-          const logoutbtn = document.querySelector("#logout");
-          logoutbtn.addEventListener("click", () => {
-            localStorage.removeItem("token");
-            window.location.assign("/index.html");
-          });
-        </script>
-      </nav>
-    </header>
-    <main class="container--center container--desktop">
-      <div class="profile__header">
-        <div class="profile" data-profile="default">
-          <span class="icon" id="user"><i class="fa-regular fa-user"></i></span>
-        </div>
-        <div class="profile__info"></div>
+  <header class="container header">
+    <a href="#">
+      <h2 class="logo">Meal <span>Master</span></h2>
+    </a>
+    <nav class="navbar" data-navbar>
+      <ul class="nav__list">
+        <li>
+          <a class="nav__link" href="feed.html">Go To Feeds</a>
+        </li>
+        <li>
+          <a class="nav__link" id="logout" href="./index.html">Log out</a>
+        </li>
+      </ul>
+      <script>
+        const logoutbtn = document.querySelector("#logout");
+        logoutbtn.addEventListener("click", () => {
+          localStorage.removeItem("token");
+          window.location.assign("/index.html");
+        });
+      </script>
+    </nav>
+  </header>
+  <main class="container--center container--desktop">
+    <div class="profile__header">
+      <div class="profile" data-profile="default">
+        <span class="icon" id="user"><i class="fa-regular fa-user"></i></span>
       </div>
-      <div class="profile__bar">
-        <ul>
-          <li>
-            <a id="myQuery" data-active="false" href="#my-query">My Queries</a>
-          </li>
-          <li>
-            <a id="newQuery" data-active="true" href="#create-new-query"
-              >Create new Query</a
-            >
-          </li>
-          <li>
-            <a id="savedPlans" data-active="false" href="#saved-plans"
-              >Saved diet plans</a
-            >
-          </li>
-        </ul>
-        <button class="btn bg--pink text--white" id="post-symptom">Post</button>
-      </div>
-      <section data-view="new-query" id="profile-view"></section>
-    </main>
-    <script src="public/scripts/profile.js"></script>
-  </body>
+      <div class="profile__info"></div>
+    </div>
+    <div class="profile__bar">
+      <ul>
+        <li>
+          <a id="General" data-active="false" href="#general">General</a>
+        </li>
+        <li>
+          <a id="myQuery" data-active="false" href="#my-query">My Queries</a>
+        </li>
+        <li>
+          <a id="newQuery" data-active="true" href="#create-new-query">Create new Query</a>
+        </li>
+        <li>
+          <a id="savedPlans" data-active="false" href="#saved-plans">Saved diet plans</a>
+        </li>
+      </ul>
+      <button class="btn bg--pink text--white" id="post-symptom">Post</button>
+    </div>
+    <section id="profile-view"></section>
+  </main>
+  <script src="public/scripts/script.js"></script>
+</body>
+
 </html>
