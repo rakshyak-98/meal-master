@@ -1,5 +1,4 @@
-const profileViewContainer = document.getElementById("profile-view");
-profileViewContainer.appendChild(createFeed());
+createProfileElement()
 function createFeed() {
   const feed = document.createElement("div");
   feed.setAttribute("class", "feed");
@@ -32,9 +31,42 @@ function createFeed() {
   symptom.appendChild(footer);
   return feed;
 }
-const loginBtn = document.getElementById("form");
-loginBtn.addEventListener("submit", login);
-function login(e) {
-  e.preventDefault();
-  location.replace("/profile");
+window.addEventListener("load", (event) => {
+  if(event.target.URL.includes("feed")){
+
+}else if(event.target.URL.includes("profile")){
+  workWithProfile();  
+}
+});
+function workWithProfile(){
+window.addEventListener("hashchange", (event) => {
+  if(event.newURL.includes("general")) createProfileElement();
+  if(event.newURL.includes("my-query")) createQuery();
+  })
+}
+function createQuery(){
+  const profileView = document.getElementById("profile-view")
+  profileView.innerHTML = ""
+  profileView.appendChild(createFeed())
+}
+function createProfileElement(){
+  const profileView = document.getElementById("profile-view")
+  profileView.innerHTML = ""
+  const profileForm = createProfileForm()
+  profileView.appendChild(profileForm)
+}
+function createProfileForm(){
+  const form = document.createElement("form")
+  const button = document.createElement("button")
+  const nameInput = document.createElement("input")
+  const emailInput = document.createElement("input")
+  nameInput.setAttribute("name", "username")
+  emailInput.setAttribute("name", "email")
+  emailInput.setAttribute("type", "email")
+  form.appendChild(nameInput)
+  form.appendChild(emailInput)
+  button.textContent = "update"
+  form.appendChild(button)
+  button.setAttribute("class", "button")
+  return form
 }

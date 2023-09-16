@@ -520,3 +520,15 @@ p {
   font-size: 1.8rem;
   font-weight: bold;
 }
+button{
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+#profile-view form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
