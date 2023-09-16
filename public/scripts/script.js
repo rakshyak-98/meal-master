@@ -41,8 +41,24 @@ window.addEventListener("load", (event) => {
 function workWithProfile(){
 window.addEventListener("hashchange", (event) => {
   if(event.newURL.includes("general")) createProfileElement();
-  if(event.newURL.includes("my-query")) createQuery();
+  else if(event.newURL.includes("my-query")) createQuery();
+  else if(event.newURL.includes("create-new-query")) createNewQueryForm()
+  else if(event.newURL.includes("saved-plans")){
+    document.getElementById("profile-view").innerText = ""
+  }
   })
+}
+function createNewQueryForm(){
+  const profileView = document.getElementById("profile-view")
+  const form = document.createElement("form")
+  const titleInput = document.createElement("input")
+  const descriptionInput = document.createElement('textarea')
+  profileView.innerHTML = ""
+  form.appendChild(titleInput)
+  titleInput.setAttribute("name", "title")
+  descriptionInput.setAttribute("name", "description")
+  form.appendChild(descriptionInput)
+  profileView.appendChild(form)
 }
 function createQuery(){
   const profileView = document.getElementById("profile-view")
