@@ -4,7 +4,7 @@
   "description": "meal master health website",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon backend/init.js",
+    "dev": "standard --fix && nodemon backend/init.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -24,6 +24,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "standard": "^17.1.0"
   }
 }

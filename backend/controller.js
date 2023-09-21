@@ -1,69 +1,69 @@
-const { userSerializer, postSerializer } = require("./serializers");
-const { user: client, post } = require("./models");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
+const { userSerializer, postSerializer } = require('./serializers')
+const { user: client, post } = require('./models')
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 const createUser = async (req, res) => {
-  const { email, username, password, role } = req.body;
+  const { email, username, password, role } = req.body
   try {
     const serialized = await userSerializer({
       email,
       username,
       password,
-      role,
-    });
-    await client.create({ ...serialized });
-    const user = client.findOne({ email });
-    const token = jwt.sign({ ...user }, process.env.JWT_SECRET);
-    return res.status(201).send({ token });
+      role
+    })
+    await client.create({ ...serialized })
+    const user = client.findOne({ email })
+    const token = jwt.sign({ ...user }, process.env.JWT_SECRET)
+    return res.status(201).send({ token })
   } catch (error) {
-    return res.status(400).send({ error: error.message });
+    return res.status(400).send({ error: error.message })
   }
-};
+}
 
 const loginUser = async (req, res) => {
-  const { email, password } = req.body;
-  const user = await client.findOne({ email }, "username email password");
-  console.log(user);
+  const { email, password } = req.body
+  const user = await client.findOne({ email }, 'username email password')
+  console.log(user)
 
-  if (!user) return res.status(400).send({ error: "user not found" });
+  if (!user) return res.status(400).send({ error: 'user not found' })
 
-  const isMatch = bcrypt.compareSync(password, user.password);
+  const isMatch = bcrypt.compareSync(password, user.password)
 
   if (isMatch) {
-    delete user.password;
+    delete user.password
     const token = jwt.sign(
       { email: user.email, password: user.password, username: user.username },
       process.env.JWT_SECRET
-    );
-    res.status(200).send({ token: token, isMatch: isMatch });
+    )
+    res.status(200).send({ token, isMatch })
   } else {
-    res.status(400).send({ error: "please check user email or password" });
+    res.status(400).send({ error: 'please check user email or password' })
   }
-};
+}
 
 const createPost = (req, res) => {
   try {
-    const serialized = postSerializer(req.body);
-    post.create();
+    const serialized = postSerializer(req.body)
+    post.create()
   } catch (error) {
-    console.error(error.message);
+    console.error(error.message)
   }
-  res.status(200).send("success");
-};
+  res.status(200).send('success')
+}
 
 const getUser = (req, res) => {
   try {
     user = jwt.verify(
-      req.headers.authorization.split(" ")[1],
+      req.headers.authorization.split(' ')[1],
       process.env.JWT_SECRET
-    );
-    res.json({ user: user });
+    )
+    res.json({ user })
   } catch (error) {
-    console.error(error.message);
-    res.status(400).send({ error: error.message });
+    console.error(error.message)
+    res.status(400).send({ error: error.message })
   }
-};
-exports.createPost = createPost;
-exports.createUser = createUser;
-exports.getUser = getUser;
-exports.loginUser = loginUser;
+}
+exports.createPost = createPost
+exports.createUser = createUser
+exports.getUser = getUser
+exports.loginUser = loginUser

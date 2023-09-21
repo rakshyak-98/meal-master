@@ -1,25 +1,25 @@
-const bcrypt = require("bcrypt");
-const { checkKey } = require("./utils");
+const bcrypt = require('bcrypt')
+const { checkKey } = require('./utils')
 const userSerializer = async function (obj) {
-  checkKey(["username", "password", "role", "email"], obj);
+  checkKey(['username', 'password', 'role', 'email'], obj)
 
-  let { username, password, role, email } = obj;
+  let { username, password, role, email } = obj
 
-  const saltRounds = 10;
+  const saltRounds = 10
 
   // remove the space from front and back.
-  username = username.trim();
-  password = password.trim();
+  username = username.trim()
+  password = password.trim()
 
-  password = await bcrypt.hash(password, saltRounds);
+  password = await bcrypt.hash(password, saltRounds)
 
-  const user = new Object({ username, password, email, role });
-  return user;
-};
+  const user = new Object({ username, password, email, role })
+  return user
+}
 
 const postSerializer = async function (obj) {
-  checkKey(["user", "title", "description"], obj);
-};
+  checkKey(['user', 'title', 'description'], obj)
+}
 
-exports.userSerializer = userSerializer;
-exports.postSerializer = postSerializer;
+exports.userSerializer = userSerializer
+exports.postSerializer = postSerializer
